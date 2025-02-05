@@ -1,0 +1,146 @@
+@charset "utf-8";
+*{
+    box-sizing: border-box;
+}
+:root{
+    --color-primary :rgb(0,78,162);
+}
+body{
+    line-height: 1.5;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.wrapper{
+    width: 100%;
+    height: auto;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/00_MV_knight_zentai_sp.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.top-p-img{
+    width: 25%;
+    max-width: 180px;
+    margin: 1rem 1rem 0 0;
+    position: absolute;
+    right: 0;
+}
+.content-container{
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.container{
+    margin: 1.5rem auto 0;
+}
+.mc-img{
+    width: 100%;
+    object-fit: cover;
+}
+.description{
+    background-color :#000000;
+    line-height: 1.75;
+}
+.description p{
+    padding: 2.43rem;
+    font-size: 0.75rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+.class-img-top,.class-img-bottom{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.class-img-top img,.class-img-bottom img{
+    width: 33.3%;
+    object-fit: cover;
+}
+.class-img-top{
+    margin-top: 1.5rem;
+}
+.class-img-bottom{
+    margin-bottom: 1.5rem;
+}
+.overview-container{
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto 1.5rem;
+}
+.footer{
+    height: 100%;
+    padding: 0 0 4.5vh;
+    background-color: var(--color-primary);
+}
+.footer-content{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.yda-logo{
+    width: 85%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+@media screen and (min-width:1024px){
+    .header{
+        background-image: url(../img/00_MV_knight_zentai_pc.jpg);
+    }
+    .top-p-img{
+        width: 17%;
+        max-width: 200px;
+        margin: 1rem 1rem 0 0;
+        position: absolute;
+        right: 0;
+    }
+    .container{
+        display: flex;
+    }
+    .mc-img{
+        width: 33.3%;
+        object-fit: cover;
+    }
+    .description{
+        width: 100%;
+        background-color :#000000;
+        line-height: 1.75;
+    }
+    .description p{
+        margin: 2.5rem 0 0 0;
+        font-size: 0.95rem;
+        padding: 2.43rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #ffffff;
+    }
+    .class-img-top img,.class-img-bottom img{
+        object-fit: cover;
+    }
+    .overview-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .ex-logo{
+        width: 60%;
+    }
+    .map-img{
+        width: 40%;
+    }
+    .footer{
+        height: 100%;
+    }
+    .yda-logo{
+        max-width: 700px;
+        width: 75%;
+    }
+}

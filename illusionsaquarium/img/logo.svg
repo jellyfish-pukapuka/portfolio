@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 396.85 113.39">
+  <!-- Generator: Adobe Illustrator 29.0.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 186)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+
+      .st0, .st1, .st2, .st3, .st4 {
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+      }
+
+      .st0, .st1, .st2, .st4 {
+        stroke: #040000;
+      }
+
+      .st0, .st2 {
+        stroke-width: 3px;
+      }
+
+      .st5 {
+        display: none;
+        fill: #f5d436;
+      }
+
+      .st1, .st2, .st4 {
+        fill: none;
+      }
+
+      .st6 {
+        font-size: 12px;
+      }
+
+      .st6, .st7, .st3, .st8 {
+        fill: #040000;
+      }
+
+      .st6, .st8 {
+        font-family: PSuiryuNeoromanStdN-U-83pv-RKSJ-H, 'A P-OTF SuiryuNeoroman StdN';
+      }
+
+      .st3 {
+        stroke: #fff;
+      }
+
+      .st4 {
+        stroke-width: 2px;
+      }
+
+      .st8 {
+        font-size: 48.11px;
+      }
+    </style>
+  </defs>
+  <g id="_レイヤー_1" data-name="レイヤー_1">
+    <rect class="st5" width="396.85" height="113.39"/>
+    <line class="st3" x1="323.5" y1="47.37" x2="325.33" y2="43.44"/>
+    <path class="st1" d="M133.76,87.38c39.26-32.95,60.49-34.99,72.79-29.5,14.87,6.64,16.73,24.34,37.54,31.03,15.78,5.07,30.4-.06,36.78-2.3,25.87-9.07,38.11-30.85,41.37-37.16"/>
+    <path class="st7" d="M98.59,97.6c-23.68-3.57-39.86-26.51-36.13-51.24,3.49-23.16,23.21-39.67,45.15-38.74-1.55-.39-3.12-.72-4.73-.96-27.09-4.08-52.43,15.01-56.6,42.64-4.17,27.64,14.42,53.35,41.51,57.43,20.71,3.12,40.38-7.31,50.37-24.73-9.48,11.51-24.21,17.91-39.56,15.6Z"/>
+    <line class="st0" x1="85.42" y1="10.33" x2="85.42" y2="23.48"/>
+    <line class="st4" x1="85.42" y1="27" x2="85.42" y2="30"/>
+    <line class="st4" x1="85.42" y1="32.83" x2="85.42" y2="35.83"/>
+    <line class="st4" x1="108.92" y1="76.03" x2="108.92" y2="81.1"/>
+    <line class="st4" x1="108.92" y1="84.2" x2="108.92" y2="86.74"/>
+    <line class="st4" x1="108.92" y1="89.89" x2="108.92" y2="90.6"/>
+    <circle class="st7" cx="101.4" cy="11.29" r="1.42"/>
+    <circle class="st7" cx="110.12" cy="14.59" r="1.42"/>
+    <circle class="st7" cx="107.28" cy="8.46" r="2.83"/>
+    <circle class="st7" cx="47.82" cy="71.86" r="2.13"/>
+    <line class="st2" x1="47.82" y1="90.63" x2="47.82" y2="98.08"/>
+    <circle class="st7" cx="68.5" cy="65.24" r="2.42"/>
+    <circle class="st7" cx="65.67" cy="57.64" r="2.83"/>
+    <circle class="st7" cx="123.56" cy="89.89" r="2.41"/>
+    <circle class="st7" cx="129.49" cy="85.47" r="2.13"/>
+    <circle class="st7" cx="47.82" cy="84.14" r="2.13"/>
+    <circle class="st7" cx="47.82" cy="77.99" r="2.13"/>
+    <circle class="st7" cx="68.02" cy="50.27" r="2.2"/>
+    <circle class="st7" cx="99.48" cy="93.48" r="2.41"/>
+    <polyline class="st7" points="80.56 74.55 76.14 72.7 74.22 68.69 72.25 72.75 68.02 74.52 72.2 76.43 74.22 80.4 75.98 76.8"/>
+  </g>
+  <g id="_レイヤー_2" data-name="レイヤー_2">
+    <text class="st8" transform="translate(79.99 74.55)"><tspan x="0" y="0">幻想水族館</tspan></text>
+    <text class="st6" transform="translate(100.98 27.82)"><tspan x="0" y="0">illusions</tspan></text>
+  </g>
+</svg>

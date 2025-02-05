@@ -1,0 +1,563 @@
+/*フォントのインポート*/
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
+
+/* 全ての要素に対する設定 */
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+/* 埋め込みリンクに対する設定 */
+iframe {
+    aspect-ratio: 8/4;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+a {
+    color: #9fe1ff;
+}
+
+hr {
+    height: 1px;
+    border-width: 0;
+    background-image: -webkit-linear-gradient(left,
+	transparent 0%,#ccc 50%,transparent 100%);
+	background-image: linear-gradient(90deg,
+	transparent 0%,#ccc 50%,transparent 100%);
+    margin: auto;
+}
+
+.border-top {
+    height: 1px;
+    border-width: 0;
+    background-image: -webkit-linear-gradient(left,
+	transparent 0%,#ccc 50%,transparent 100%);
+	background-image: linear-gradient(90deg,
+	transparent 0%,#ccc 50%,transparent 100%);
+    margin: 3% auto 0%
+}
+
+.border-bottom {
+    height: 1px;
+    border-width: 0;
+    background-image: -webkit-linear-gradient(left,
+	transparent 0%,#ccc 50%,transparent 100%);
+	background-image: linear-gradient(90deg,
+	transparent 0%,#ccc 50%,transparent 100%);
+    margin: 0% auto 3%
+}
+
+/* ロード画面の設定 */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.568);
+    z-index: 9999;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 50%;
+    bottom: 50%;
+    left: 48.2%;
+    right: 50%;
+    border-radius: 50%;
+    border: solid 4px;
+    border-color: #000000 #00000010;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* ここまで */
+
+/*ヘッダーの位置を設定*/
+header {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+/*ヘッダー画像の設定*/
+div.header_back {
+    background-image: url(header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 20vh;
+}
+
+/*ヘッダー画像にレイヤーマスク*/
+.header_back::after {
+    content: "";
+	display: block;
+    position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,.3) radial-gradient(rgba(0,0,0,.3) 25%, transparent 0) center / 5px 5px;
+}
+
+/* ヘッダーロゴの表示範囲 */
+.header_logo {
+    position: relative;
+    z-index: 1;
+    padding-top: 15vh;
+    padding-left: 25vh;
+}
+@media (max-width:750px) {
+    .header_logo {
+        padding-left: 6.0vh;
+    }
+}
+
+/* ロゴ上二段のデザイン*/
+h2.logo {
+    font-size: 8.0ex;
+    color: azure;
+    font-family: "Amatic SC",cursive;
+    margin: 0%;
+    letter-spacing: 0.15em;
+    animation: slide-in 1s ease-in-out;
+}
+@media (max-width:750px) {
+    h2.logo {
+        font-size: 6.0ex;
+        letter-spacing: 0.1em;
+    }
+}
+
+/*ロゴ下段のデザイン*/
+h2.logo_border {
+    font-size: 6.5ex;
+    color:azure;
+    font-family: "Amatic SC",cursive;
+    margin: 0%;
+    letter-spacing: 0.13em;
+    animation: slide-in 2.2s ease-in-out;
+}
+@media (max-width:750px) {
+    h2.logo_border {
+        font-size: 4.5ex;
+        letter-spacing: 0.08em;
+    }
+}
+
+/* テキストが左から右へ流れるアニメーション */
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* ABOUTの表示範囲 */
+div.content_About_area {
+    padding-top: 75px;
+    padding-bottom: 50px;
+}
+
+/* ABOUTタイトルの表示 */
+.About-title {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    text-align: center;
+    font-size: 6ex;
+    font-family: 'Homemade Apple', cursive;
+}
+@media (max-width:750px) {
+    .About-title {
+        font-size: 4.5ex;
+    }
+}
+
+/* jsで追加するクラス */
+.visible_About {
+    opacity: 1;
+    transform: none;
+}
+
+/* ABOUTの表示 */
+div.content_About {
+    padding-top: 8.5%;
+    padding-bottom: 8.5%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+/* 自己紹介本文のデザイン */
+.content_About p {
+    font-family: 'Kiwi Maru', serif;
+    font-weight: bolder;
+    letter-spacing: 0.08em;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+}
+
+/* Likeエリアのデザイン */
+.content_like_area {
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+/* likeタイトルのデザイン */
+.like-title {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    text-align: center;
+    font-size: 6ex;
+    font-family: 'Homemade Apple', cursive;
+    letter-spacing: 0.1em;
+}
+@media (max-width:750px) {
+    .like-title {
+        font-size: 4.5ex;
+    }
+}
+
+/* likeエリアの設定 */
+.content_like {
+    padding-top: 6.5%;
+    display: flex;
+    justify-content: center;
+    margin: 5vh;
+    width: 95.5%;
+}
+@media (max-width:750px) {
+    .content_like {
+        flex-direction: column;
+    }
+}
+
+/* ボタンのデザイン */
+.popup-geme_trigger,.popup-music_trigger,.popup-program_trigger {
+    display: inline-block;
+    font-family:  'Kiwi Maru', serif;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #f7f7f7;
+    padding: 20px;
+    min-width: 175px;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .5s;
+    z-index: 2;
+}
+
+/* ゲームボタンのホバーアニメーション */
+.popup-geme_trigger::after {
+    content: ""; /* 擬似要素を作成 */
+    background: #c0c0c0;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    margin: auto;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 0; 
+    right: 0;
+    width: 100%;
+    padding-top: 100%;
+    height: 0;
+    z-index: -1;
+    transform: translateY(-50%) scale(0.1);
+    transition: opacity .5s, transform 0s;
+    transition-delay: 0s, .4s;
+}
+
+.popup-geme_trigger:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+    transition-delay: 0s;
+    transition: opacity .8s, transform .6s ease-in-out;
+}
+
+.popup-geme_trigger:hover {
+    background-color: #c0c0c0;
+}
+/* ここまで */
+
+/* 音楽ボタンのホバーアニメーション */
+.popup-music_trigger::after {
+    content: ""; /* 擬似要素を作成 */
+    background: #c0c0c0;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    margin: auto;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-top: 100%;
+    height: 0;
+    z-index: -1;
+    transform: translateY(-50%) scale(0.1);
+    transition: opacity .5s, transform 0s;
+    transition-delay: 0s, .4s;
+}
+
+.popup-music_trigger:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+    transition-delay: 0s;
+    transition: opacity .8s, transform .6s ease-in-out;
+}
+
+.popup-music_trigger:hover {
+    background-color: #c0c0c0;
+}
+/* ここまで */
+
+/* プログラミングボタンのホバーアニメーション */
+.popup-program_trigger::after {
+    content: ""; /* 擬似要素を作成 */
+    background: #c0c0c0;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    margin: auto;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 0; 
+    right: 0;
+    width: 100%;
+    padding-top: 100%;
+    height: 0;
+    z-index: -1;
+    transform: translateY(-50%) scale(0.1);
+    transition: opacity .5s, transform 0s;
+    transition-delay: 0s, .4s;
+}
+
+.popup-program_trigger:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+    transition-delay: 0s;
+    transition: opacity .8s, transform .6s ease-in-out;
+}
+
+.popup-program_trigger:hover {
+    background-color: #c0c0c0;
+}
+/* ここまで */
+
+/* モーダルウィンドウ表示にするため、コンテンツを隠す */
+.popup-geme, .popup-music, .popup-program {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9999;
+}
+
+/* モーダルウィンドウの設定 */
+.modalcontent-geme, .modalcontent-music, .modalcontent-program {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 60%;
+    height: 75%;
+    overflow-y: scroll;
+    position: relative;
+}
+@media (max-width:420px) {
+    .modalcontent-geme, .modalcontent-music, .modalcontent-program {
+        width: 60%;
+        height: 90%;
+    }
+}
+
+/* モーダル内のタイトルデザイン */
+.modalcontent-title-top {
+    font-family: 'Kiwi Maru', serif;
+    font-size: 1.5em;
+    padding: 3px 10px 10px 10px;
+    text-align: center;
+}
+@media (max-height:760px) {
+    .modalcontent-title-top {
+        font-size: 1.05em;
+    }
+}
+
+/* 上部以外のタイトルのデザイン */
+.modalcontent-title {
+    font-family: 'Kiwi Maru', serif;
+    font-size: 1.5em;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+@media (max-height:760px) {
+    .modalcontent-title {
+        font-size: 1.05em;
+    }
+}
+
+/* モーダルウィンドウ内の文章デザイン */
+.modalcontent-sentence {
+    padding-left: 17px;
+    padding-bottom: 7.5px;
+    text-align: center;
+    padding: 10px;
+}
+@media (max-height:760px) {
+    .modalcontent-sentence {
+        font-size: 0.75em;
+    }
+}
+
+.modalcontent {
+    text-align: center;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+/* モーダルウィンドウ内のurlデザイン */
+.modalcontent-url {
+    text-decoration: none;
+    font-family: 'Kiwi Maru', serif;
+    font-size: 1.2em;
+    padding: 5px 0px 10px 0px;
+    color: #9fe1ff;
+    text-align: center;
+}
+@media (max-height:760px) {
+    .modalcontent-url {
+        font-size: 1em;
+    }
+}
+
+.modalcontent-url:hover {
+    text-decoration: underline
+}
+
+.modalcontent-bottom {
+    font-family: 'Kiwi Maru', serif;
+    font-size: 1.25em;
+    padding: 30px 0px 10px 30px;
+}
+@media (max-height:760px) {
+    .modalcontent-bottom {
+        font-size: 0.85em;
+        padding: 15px 0px 10px 30px;
+    }
+}
+@media (max-width:700px) {
+    .modalcontent-bottom {
+        font-size: 1em;
+    }
+}
+
+/* youtubeのurlを横並びにする */
+.url-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 0px;
+}
+@media (max-width:600px) {
+    .url-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* とじるボタン */
+.modalclose {
+    position: absolute;
+    top: 1vh;
+    right: 2vh;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ポインターアニメーションを設定 */
+.popup-geme_trigger, .popup-music_trigger, .popup-program_trigger {
+    cursor: pointer;
+}
+
+/* jsで追加するクラス */
+.visible_like {
+    opacity: 1;
+    transform: none;
+}
+
+/*フッターメニュー*/
+footer {
+    position: relative;
+}
+
+/*フッター画像の設定*/
+div.footer_back {
+    background-image: url(footer.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    padding-top: 20vh;
+}
+
+/*フッター画像にレイヤーマスク*/
+.footer_back::after {
+    content: "";
+	display: block;
+    position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,.3) radial-gradient(rgba(0,0,0,.3) 25%, transparent 0) center / 5px 5px;
+}
+
+/*コピーライト*/
+p.copy {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    color: azure;
+    text-decoration: none;
+    font-size: 120%;
+    font-family: 'Homemade Apple', cursive;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
